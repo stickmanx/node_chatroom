@@ -4,6 +4,9 @@ var path = require('path');
 var mime = require('mime');
 var cache = {};
 
+var chatServer = require('./lib/chat_server');
+chatServer.listen(server);
+
 // Helper Functions
 // 1. Send 404 errors when file requested doesn't exist
 function send404(response) {
