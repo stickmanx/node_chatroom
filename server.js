@@ -13,12 +13,12 @@ function send404(response) {
 }
 
 // 2. Writes appropriate HTTP header and sends content of file
-function sendFile(response, filePath, fileContent) {
+function sendFile(response, filePath, fileContents) {
 	response.writeHead(
 		200,
 		{"content-type": mime.lookup(path.basename(filePath))}
 	);
-	reponse.end(fileContents);
+	response.end(fileContents);
 }
 
 // 3. Checks if file is cached, if so serve it
